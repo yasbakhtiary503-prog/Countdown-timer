@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#17251e" />
+    <title>Countdown Timer</title>
+
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <!-- Font Family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Links Css -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/respansive.css" />
+
+    <!-- Links Java Script -->
+    <script type="module" src="./js/app.js" defer></script>
+    <script src="./js/modules/calendar.js" defer></script>
+  </head>
+  <body>
+    <!-------------------- Header --------------------->
+    <header class="header">
+      <div class="container header__container">
+        <!-- Brand -->
+        <div class="header__brand">
+          <a href="./index.html" class="header__brand-link">
+            <img
+              src="./image/feather-wound-svgrepo-com (1).svg"
+              alt="Site Logo"
+              class="header__brand-logo"
+            />
+            ChronoBloom
+          </a>
+        </div>
+
+        <!-- Menu -->
+        <button class="header__menu" type="button" aria-label="Open menu">
+          <i class="header__menu-icon ri-menu-line"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-------------------- Main --------------------->
+    <main class="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <p class="hero__subtitle">
+              Happy birthday, the reason I keep going 1404/8/22
+            </p>
+
+            <h1 class="hero__title">
+              Countdown<span class="hero__title-highlight">To Your Moment</span>
+            </h1>
+
+            <p class="hero__description">
+              You are the most beautiful blessing in my life, and no words can
+              express the depth of the love I have for you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clock -->
+      <section class="clock">
+        <div class="container clock__container">
+          <!-- Date -->
+          <div class="date-picker">
+            <!-- Trigger -->
+            <button class="date-picker__trigger js-date-picker__trigger">
+              <i class="date-picker__icon ri-calendar-todo-fill"></i>
+              <p class="date-picker__text">Select End Date...</p>
+              <i class="date-picker__icon ri-arrow-down-s-line"></i>
+            </button>
+
+            <!-- Calendar -->
+            <div class="calendar js-calendar">
+              <header class="calendar__header">
+                <button
+                  class="calendar__header-button js-calendar-prev"
+                  type="button"
+                  aria-label="Previous month"
+                >
+                  <i class="ri-arrow-left-s-line"></i>
+                </button>
+
+                <div class="calendar__heading">
+                  <h3 class="calendar__title js-calendar__title">
+                    Farvardin 1405
+                  </h3>
+                  <span class="calendar__subtitle">Choose your moment</span>
+                </div>
+
+                <button
+                  class="calendar__header-button js-calendar-next"
+                  type="button"
+                  aria-label="Next month"
+                >
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </header>
+
+              <div class="calendar__main">
+                <table class="calendar__table">
+                  <thead>
+                    <tr class="calendar__row">
+                      <th class="calendar__week-days">Sh</th>
+                      <th class="calendar__week-days">Ye</th>
+                      <th class="calendar__week-days">Do</th>
+                      <th class="calendar__week-days">Se</th>
+                      <th class="calendar__week-days">Ch</th>
+                      <th class="calendar__week-days">Pa</th>
+                      <th class="calendar__week-days">Jo</th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="calendar__body js-calendar__body">
+                    <!-- <tr class="calendar__row">
+                      <td class="calendar__cell">
+                        <button class="calendar__day" type="button">1</button>
+                      </td>
+
+                      <td class="calendar__cell">
+                        <button class="calendar__day" type="button">2</button>
+                      </td>
+
+                      <td class="calendar__cell">
+                        <button class="calendar__day" type="button">3</button>
+                      </td>
+
+                      <td class="calendar__cell">
+                        <button class="calendar__day" type="button">4</button>
+                      </td>
+
+                      <td class="calendar__cell">
+                        <button class="calendar__day" type="button">5</button>
+                      </td>
+
+                      <td class="calendar__cell">
+                        <button class="calendar__day" type="button">6</button>
+                      </td>
+
+                      <td class="calendar__cell">
+                        <button class="calendar__day" type="button">7</button>
+                      </td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+
+              <footer class="calendar__footer">
+                <span class="calendar__footer-label">Selected date</span>
+                <span class="calendar__footer-date">Choose a day</span>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="clock__grid">
+            <!-- Days -->
+            <article class="clock__card">
+              <i class="clock__card-icon ri-calendar-todo-fill"></i>
+
+              <span class="clock__counter js-clock__counter-days">0</span>
+
+              <p class="clock__time">Days</p>
+            </article>
+
+            <!-- Hours -->
+            <article class="clock__card">
+              <i class="clock__card-icon ri-time-line"></i>
+
+              <span class="clock__counter js-clock__counter-hours">0</span>
+
+              <p class="clock__time">Hours</p>
+            </article>
+
+            <!-- Minutes -->
+            <article class="clock__card">
+              <i class="clock__card-icon ri-alarm-line"></i>
+
+              <span class="clock__counter js-clock__counter-minutes">0</span>
+
+              <p class="clock__time">Minutes</p>
+            </article>
+
+            <!-- Seconds -->
+            <article class="clock__card">
+              <i class="clock__card-icon ri-flashlight-line"></i>
+
+              <span class="clock__counter js-clock__counter-seconds">0</span>
+
+              <p class="clock__time">Seconds</p>
+            </article>
+          </div>
+
+          <!-- Button -->
+          <div class="clock__actions">
+            <button class="clock__button js-clock-button-start" type="button">
+              <i class="clock__button-icon ri-play-fill"></i>
+              Start
+            </button>
+
+            <button class="clock__button js-clock-button-reset" type="button">
+              <i class="ri-loop-right-line clock__button-icon"></i>
+              reset
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <audio src="./audio/alarm.mp3" id="alarm-sound" preload="auto"></audio>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+@media (min-width: 35em) {
+  body {
+    background-image: url("../image/Emerald\ Peacock\ Filigree\ Garden.png");
+  }
+}
+
+@media (min-width: 50em) {
+  .clock__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .hero__container {
+    margin-block-start: initial;
+  }
+}
+
+@media (min-width: 75em) {
+  body {
+    background-image: url("../image/Emerald\ Peacock\ Filigree\ Wallpaper\ Frame.png");
+  }
+}
